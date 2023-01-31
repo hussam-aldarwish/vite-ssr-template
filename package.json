@@ -16,6 +16,7 @@
     "lint:stylelint": "stylelint \"**/*.css\"",
     "lint": "run-s lint:*",
     "build:client": "vite build --mode production",
+    "build:client-ssr": "vite build --mode production --outDir dist/client-ssr --ssr src/client/entry-server.jsx",
     "build:server": "esbuild --bundle --platform=node --target=node16 --minify --packages=external --format=esm --splitting --outdir=dist/server src/server/main.js",
     "build": "run-s build:*",
     "test": "npm run lint",
