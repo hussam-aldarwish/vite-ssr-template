@@ -29,7 +29,9 @@ if (isDevelopment) {
 } else {
   app.use((await import('compression')).default());
   app.use(
-    express.static(path.resolve(__dirname, '../client'), { index: false })
+    express.static(path.resolve(__dirname, '../../dist/client'), {
+      index: false,
+    })
   );
 }
 app.use(logger('dev', { skip: (_, res) => res.statusCode < 400 }));
@@ -57,10 +59,10 @@ app.use('*', async (req, res, next) => {
       ).render;
     } else {
       template = fs.readFileSync(
-        path.resolve(__dirname, '../client/index.html'),
+        path.resolve(__dirname, '../../dist/client/index.html'),
         'utf-8'
       );
-      render = (await import('../client-ssr/entry-server.js')).render;
+      render = (await import('../../dist/server/entry-server.js')).render;
     }
 
     const appHtml = await render(url);
