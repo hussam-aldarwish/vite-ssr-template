@@ -7,7 +7,7 @@ export default defineConfig(({ ssrBuild }) => {
     ? {
         plugins: [react()],
         build: {
-          outDir: 'dist/server',
+          outDir: 'dist/client-ssr',
           ssr: true,
           ssrManifest: true,
           copyPublicDir: false,
