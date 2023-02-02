@@ -6,7 +6,7 @@ import fs from 'fs';
 import path from 'path';
 import { usePathFromURL } from './hooks.js';
 
-const { COOKIE_SECRET = 'secret', NODE_ENV, PORT = 3000 } = process.env;
+const { COOKIE_SECRET = 'secret', NODE_ENV, PORT = '3000' } = process.env;
 const { __dirname } = usePathFromURL(import.meta.url);
 const isDevelopment = NODE_ENV !== 'production';
 

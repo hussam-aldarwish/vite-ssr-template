@@ -1,8 +1,14 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
 
+/**
+ * @type {import('vite').UserConfig}
+ */
 const commonConfig = { plugins: [react()] };
 
+/**
+ * @type {import('vite').UserConfig}
+ */
 const ssrConfig = {
   build: {
     outDir: 'dist/client-ssr',
@@ -19,6 +25,9 @@ const ssrConfig = {
   },
 };
 
+/**
+ * @type {import('vite').UserConfig}
+ */
 const clientConfig = {
   build: {
     outDir: 'dist/client',
