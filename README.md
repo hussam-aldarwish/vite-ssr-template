@@ -1,5 +1,7 @@
 # Express-Vite Template
 
+[![wakatime](https://wakatime.com/badge/github/hussam-aldarwish/vite-ssr-template.svg)](https://wakatime.com/badge/github/hussam-aldarwish/vite-ssr-template)
+
 A template for building a web application using Express and Vite (React).
 
 ## Features
